@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Deploying in netlify
+          Deploying in netlify verify
         </p>
         <a
           className="App-link"

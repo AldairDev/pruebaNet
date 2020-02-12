@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Home2 from './Home2'
+import Home from './home'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Deploying in netlify verify 1
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Route exact path="/">
+          <Link to="/home2">next page</Link>
+        </Route>
+        
+        <Route exact path="/" component={Home} />
+        <Route exact path="/home2" component={Home2} />
+      </Router>
     </div>
   );
 }
